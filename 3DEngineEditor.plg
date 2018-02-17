@@ -1,0 +1,74 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: 3DEngineEditor - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x419 /fo"Release/Resource.res" /d "NDEBUG" /d "_AFXDLL" "E:\CopyToHome\3DEngineEditor\Resource.rc"" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP22A.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_AFXDLL" /Fp"Release/3DEngineEditor.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"E:\CopyToHome\3DEngineEditor\bsp.cpp"
+"E:\CopyToHome\3DEngineEditor\cdialog_selecttexture.cpp"
+"E:\CopyToHome\3DEngineEditor\cdialog_settingssector.cpp"
+"E:\CopyToHome\3DEngineEditor\cdialog_settingswall.cpp"
+"E:\CopyToHome\3DEngineEditor\cdialog_texturefollow.cpp"
+"E:\CopyToHome\3DEngineEditor\cdocument_map.cpp"
+"E:\CopyToHome\3DEngineEditor\cframewnd_main.cpp"
+"E:\CopyToHome\3DEngineEditor\common.cpp"
+"E:\CopyToHome\3DEngineEditor\csector.cpp"
+"E:\CopyToHome\3DEngineEditor\ctexture.cpp"
+"E:\CopyToHome\3DEngineEditor\ctexturefollow.cpp"
+"E:\CopyToHome\3DEngineEditor\cview_map.cpp"
+"E:\CopyToHome\3DEngineEditor\cwall.cpp"
+"E:\CopyToHome\3DEngineEditor\main.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP22A.tmp" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP22B.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/3DEngineEditor.pdb" /machine:I386 /out:"Release/3DEngineEditor.exe" 
+.\Release\bsp.obj
+.\Release\cdialog_selecttexture.obj
+.\Release\cdialog_settingssector.obj
+.\Release\cdialog_settingswall.obj
+.\Release\cdialog_texturefollow.obj
+.\Release\cdocument_map.obj
+.\Release\cframewnd_main.obj
+.\Release\common.obj
+.\Release\csector.obj
+.\Release\ctexture.obj
+.\Release\ctexturefollow.obj
+.\Release\cview_map.obj
+.\Release\cwall.obj
+.\Release\main.obj
+.\Release\Resource.res
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP22B.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+bsp.cpp
+cdialog_selecttexture.cpp
+cdialog_settingssector.cpp
+cdialog_settingswall.cpp
+cdialog_texturefollow.cpp
+cdocument_map.cpp
+cframewnd_main.cpp
+common.cpp
+csector.cpp
+ctexture.cpp
+ctexturefollow.cpp
+cview_map.cpp
+cwall.cpp
+main.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+3DEngineEditor.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,359 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_MAIN MENU DISCARDABLE 
+BEGIN
+    POPUP "Файл"
+    BEGIN
+        MENUITEM "Загрузить уровень",           ID_MENU_FILE_LOAD
+        MENUITEM "Сохранить уровень",           ID_MENU_FILE_SAVE
+        MENUITEM SEPARATOR
+        MENUITEM "Импортировать карту из текстового файла", 
+                                                ID_MENU_FILE_IMPORT_TXT
+        MENUITEM SEPARATOR
+        MENUITEM "Экспортировать BSP-карту",    ID_MENU_FILE_EXPORT_BSP
+        MENUITEM "Экспортировать PORTAL-карту", ID_MENU_FILE_EXPORT_PORTAL
+        MENUITEM SEPARATOR
+        MENUITEM "Очистить поле",               ID_MENU_FILE_CLEARMAP
+        MENUITEM "Сброс",                       ID_MENU_FILE_RESET
+        MENUITEM SEPARATOR
+        MENUITEM "Выход",                       ID_MENU_FILE_EXIT
+    END
+    POPUP "Окна"
+    BEGIN
+        MENUITEM SEPARATOR
+        MENUITEM "Основная панель управления",  ID_MENU_WINDOW_MAIN_PANEL
+        , CHECKED
+        MENUITEM "Вспомогательная панель управления", 
+                                                ID_MENU_WINDOW_CONTROL_PANEL
+        , CHECKED
+        MENUITEM SEPARATOR
+        MENUITEM "Панель настройки вида",       ID_MENU_WINDOW_VIEW_PANEL
+        , CHECKED
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOGBAR_CONTROL DIALOG DISCARDABLE  0, 0, 96, 151
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Координаты курсора",IDC_STATIC,5,5,85,35
+    RTEXT           "Y:",IDC_STATIC,10,25,15,8,SS_SUNKEN
+    RTEXT           "X:",IDC_STATIC,10,15,15,8,SS_SUNKEN
+    LTEXT           "-1",IDC_STATIC_DIALOGBAR_CONTROL_CURSOR_X,30,15,55,8,
+                    SS_SUNKEN
+    LTEXT           "-1",IDC_STATIC_DIALOGBAR_CONTROL_CURSOR_Y,30,25,55,8,
+                    SS_SUNKEN
+    PUSHBUTTON      "Удалить",IDC_BUTTON_DIALOGBAR_CONTROL_DELETE,5,105,85,
+                    14,WS_DISABLED
+    PUSHBUTTON      "Параметры секторов",
+                    IDC_BUTTON_DIALOGBAR_CONTROL_SECTOR_SETTINGS,5,70,85,14,
+                    WS_DISABLED
+    PUSHBUTTON      "Параметры сегментов",
+                    IDC_BUTTON_DIALOGBAR_CONTROL_WALL_SETTINGS,5,45,85,14,
+                    WS_DISABLED
+    PUSHBUTTON      "Редактировать",IDC_BUTTON_DIALOGBAR_CONTROL_EDIT,5,130,
+                    85,14,WS_DISABLED
+END
+
+IDD_DIALOG_SELECT_TEXTURE DIALOGEX 0, 0, 339, 225
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CENTER | DS_CONTEXTHELP | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION
+EXSTYLE WS_EX_DLGMODALFRAME | WS_EX_CONTEXTHELP
+CAPTION "Панель выбора текстуры"
+FONT 8, "Fixedsys", 0, 0, 0x1
+BEGIN
+    SCROLLBAR       IDC_SCROLL_DIALOG_SELECT_TEXTURE_VERTICAL,324,4,8,192,
+                    SBS_VERT
+    SCROLLBAR       IDC_SCROLL_DIALOG_SELECT_TEXTURE_HORIZONTAL,4,196,320,8
+    PUSHBUTTON      "Выбрать",IDC_BUTTON_DIALOG_SELECT_TEXTURE_OK,196,208,
+                    128,12,BS_CENTER
+    PUSHBUTTON      "Отменить",IDC_BUTTON_DIALOG_SELECT_TEXTURE_CANCEL,4,208,
+                    128,12,BS_CENTER
+END
+
+IDD_DIALOG_SETTINGS_WALL DIALOGEX 0, 0, 153, 205
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CENTER | DS_CONTEXTHELP | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION
+EXSTYLE WS_EX_DLGMODALFRAME | WS_EX_CONTEXTHELP
+CAPTION "Настройки стены"
+FONT 8, "Fixedsys"
+BEGIN
+    PUSHBUTTON      "Изменить",
+                    IDC_BUTTON_DIALOG_SETTINGS_WALL_CHANGETEXTURE_UP,4,84,64,
+                    12,BS_CENTER
+    PUSHBUTTON      "Изменить",
+                    IDC_BUTTON_DIALOG_SETTINGS_WALL_CHANGETEXTURE_DOWN,84,84,
+                    64,12,BS_CENTER
+    LTEXT           "Верхняя текстура",IDC_STATIC,4,72,64,8,NOT WS_GROUP
+    LTEXT           "Нижняя текстура",IDC_STATIC,84,72,64,8,NOT WS_GROUP
+    PUSHBUTTON      "Применить",IDC_BUTTON_DIALOG_SETTINGS_WALL_OK,85,185,64,
+                    14,BS_CENTER
+    PUSHBUTTON      "Отменить",IDC_BUTTON_DIALOG_SETTINGS_WALL_CANCEL,5,185,
+                    64,14,BS_CENTER
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,5,130,142,1
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDVERT,75,4,1,126
+    PUSHBUTTON      "Анимация",IDC_BUTTON_DIALOG_SETTINGS_WALL_ANIMATE_UP,4,
+                    100,64,12,BS_CENTER
+    PUSHBUTTON      "Анимация",IDC_BUTTON_DIALOG_SETTINGS_WALL_ANIMATE_DOWN,
+                    84,100,64,12,BS_CENTER
+    CONTROL         "Стена является переключателем",
+                    IDC_CHECK_DIALOG_SETTINGS_WALL_SWITCH,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,135,145,10
+    GROUPBOX        "Переключатель связан с сектором",IDC_STATIC,5,150,140,
+                    30,BS_CENTER
+    EDITTEXT        IDC_EDIT_DIALOG_SETTINGS_WALL_SWITCH_LABEL,10,160,130,14,
+                    ES_AUTOHSCROLL
+    PUSHBUTTON      "->Низ",IDC_BUTTON_DIALOG_SETTINGS_WALL_COPY_TO_DOWN,5,
+                    115,64,12,BS_CENTER
+    PUSHBUTTON      "->Верх",IDC_BUTTON_DIALOG_SETTINGS_WALL_COPY_TO_UP,85,
+                    115,64,12,BS_CENTER
+END
+
+IDD_DIALOG_SETTINGS_SECTOR DIALOGEX 0, 0, 278, 290
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CENTER | DS_CONTEXTHELP | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION
+EXSTYLE WS_EX_DLGMODALFRAME | WS_EX_CONTEXTHELP
+CAPTION "Настройки сектора"
+FONT 8, "Fixedsys"
+BEGIN
+    GROUPBOX        "Пол",IDC_STATIC,4,4,132,96,BS_CENTER | WS_GROUP
+    GROUPBOX        "Потолок",IDC_STATIC,140,4,132,96,BS_CENTER | WS_GROUP
+    PUSHBUTTON      "Изменить",
+                    IDC_BUTTON_DIALOG_SETTINGS_SECTOR_CHANGETEXTURE_DOWN,75,
+                    15,56,12,BS_CENTER
+    PUSHBUTTON      "Изменить",
+                    IDC_BUTTON_DIALOG_SETTINGS_SECTOR_CHANGETEXTURE_UP,210,
+                    15,56,12,BS_CENTER
+    LTEXT           "Уровень",IDC_STATIC,8,84,60,8,NOT WS_GROUP
+    LTEXT           "Уровень",IDC_STATIC,144,84,60,8,NOT WS_GROUP
+    EDITTEXT        IDC_EDIT_DIALOG_SETTINGS_SECTOR_DOWN_LEVEL,76,84,56,10,
+                    ES_NUMBER
+    EDITTEXT        IDC_EDIT_DIALOG_SETTINGS_SECTOR_UP_LEVEL,212,84,56,10,
+                    ES_NUMBER
+    PUSHBUTTON      "Применить",IDC_BUTTON_DIALOG_SETTINGS_SECTOR_OK,141,270,
+                    132,14,BS_CENTER
+    PUSHBUTTON      "Отменить",IDC_BUTTON_DIALOG_SETTINGS_SECTOR_CANCEL,5,
+                    270,132,14,BS_CENTER
+    PUSHBUTTON      "Анимация",
+                    IDC_BUTTON_DIALOG_SETTINGS_SECTOR_ANIMATE_DOWN,75,31,56,
+                    12,BS_CENTER
+    PUSHBUTTON      "Анимация",IDC_BUTTON_DIALOG_SETTINGS_SECTOR_ANIMATE_UP,
+                    210,31,56,12,BS_CENTER
+    LTEXT           "Базовая освещённость (0-255)",IDC_STATIC,10,115,145,8,
+                    NOT WS_GROUP
+    EDITTEXT        IDC_EDIT_DIALOG_SETTINGS_SECTOR_BASE_LIGHTING,160,115,56,
+                    10,ES_NUMBER
+    GROUPBOX        "Параметры освещённости",IDC_STATIC,5,105,265,100,
+                    BS_CENTER | WS_GROUP
+    CONTROL         "Сектор равномерно освещён",
+                    IDC_RADIOBUTTON_DIALOG_SETTINGS_SECTOR_LIGHTING_MODE_STATIC,
+                    "Button",BS_AUTORADIOBUTTON | WS_TABSTOP,10,130,174,12
+    CONTROL         "Мигание освещения",
+                    IDC_RADIOBUTTON_DIALOG_SETTINGS_SECTOR_LIGHTING_MODE_FLASH,
+                    "Button",BS_AUTORADIOBUTTON | WS_TABSTOP,10,142,174,12
+    CONTROL         "Случайное мигание освещения",
+                    IDC_RADIOBUTTON_DIALOG_SETTINGS_SECTOR_LIGHTING_MODE_RANDOM_FLASH,
+                    "Button",BS_AUTORADIOBUTTON | WS_TABSTOP,10,180,176,12
+    CONTROL         "Плавное затухание/нарастание освещённости",
+                    IDC_RADIOBUTTON_DIALOG_SETTINGS_SECTOR_LIGHTING_MODE_DAWNING_SUNDOWN,
+                    "Button",BS_AUTORADIOBUTTON | WS_TABSTOP,10,191,176,12
+    LTEXT           "Длительность базового уровня",IDC_STATIC,10,155,145,8,
+                    NOT WS_GROUP
+    EDITTEXT        IDC_EDIT_DIALOG_SETTINGS_SECTOR_BASE_LIGHTING_TIME,160,
+                    155,56,10,ES_NUMBER
+    LTEXT           "Длительность максимального уровня",IDC_STATIC,10,170,
+                    145,8,NOT WS_GROUP
+    EDITTEXT        IDC_EDIT_DIALOG_SETTINGS_SECTOR_MAX_LIGHTING_TIME,160,
+                    170,56,10,ES_NUMBER
+    GROUPBOX        "Тип сектора",IDC_STATIC,5,210,165,40,BS_CENTER | 
+                    WS_GROUP
+    COMBOBOX        IDC_COMBO_DIALOG_SETTINGS_SECTOR_TYPE,10,220,155,170,
+                    CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Метка сектора",IDC_STATIC,175,210,95,40,BS_CENTER | 
+                    WS_GROUP
+    EDITTEXT        IDC_EDIT_DIALOG_SETTINGS_SECTOR_LABEL,180,230,85,10
+    LTEXT           "Промежуточный уровень",IDC_STATIC,10,235,90,8,NOT 
+                    WS_GROUP
+    EDITTEXT        IDC_EDIT_DIALOG_SETTINGS_SECTOR_WORKING_LEVEL,110,235,56,
+                    10,ES_NUMBER
+    CONTROL         "Антигравитация в секторе",
+                    IDC_CHECK_DIALOG_SETTINGS_ANTIGRAVITATION,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,255,165,10
+    PUSHBUTTON      "->Потолок",
+                    IDC_BUTTON_DIALOG_SETTINGS_SECTOR_COPY_TO_FLOW,75,50,56,
+                    12,BS_CENTER
+    PUSHBUTTON      "->Пол",IDC_BUTTON_DIALOG_SETTINGS_SECTOR_COPY_TO_FLOOR,
+                    210,50,56,12,BS_CENTER
+END
+
+IDD_DIALOG_TEXTURE_FOLLOW DIALOGEX 0, 0, 272, 165
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CENTER | DS_CONTEXTHELP | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION
+EXSTYLE WS_EX_DLGMODALFRAME | WS_EX_CONTEXTHELP
+CAPTION "Задание последовательности смены текстур"
+FONT 8, "Fixedsys", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME,4,4,264,84
+    SCROLLBAR       IDC_SCROLLBAR_DIALOG_TEXTURE_FOLLOW_LIST,8,76,256,9
+    PUSHBUTTON      "Добавить текстуру",IDC_BUTTON_DIALOG_TEXTURE_FOLLOW_ADD,
+                    4,92,84,14,BS_CENTER
+    PUSHBUTTON      "Удалить текстуру",
+                    IDC_BUTTON_DIALOG_TEXTURE_FOLLOW_DELETE,94,92,84,14,
+                    BS_CENTER
+    PUSHBUTTON      "Повторить текстуру",
+                    IDC_BUTTON_DIALOG_TEXTURE_FOLLOW_REPEAT,184,92,84,14,
+                    BS_CENTER
+    PUSHBUTTON      "Очистить список текстур",
+                    IDC_BUTTON_DIALOG_TEXTURE_FOLLOW_CLEAR,4,108,174,14,
+                    BS_CENTER
+    PUSHBUTTON      "Отмена",IDC_BUTTON_DIALOG_TEXTURE_FOLLOW_CANCEL,184,108,
+                    84,14,BS_CENTER
+    PUSHBUTTON      "Применить",IDC_BUTTON_DIALOG_TEXTURE_FOLLOW_OK,184,124,
+                    84,14,BS_CENTER
+    CONTROL         "Повторять смену текстуры циклически",
+                    IDC_RADIOBUTTON_DIALOG_TEXTURE_FOLLOW_CYCLES,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,4,124,174,12
+    CONTROL         "Инвертировать направление смены текстуры",
+                    IDC_RADIOBUTTON_DIALOG_TEXTURE_FOLLOW_ZIGZAG,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,4,136,174,12
+    CONTROL         "Нет анимации",
+                    IDC_RADIOBUTTON_DIALOG_TEXTURE_FOLLOW_DISABLE,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,4,148,176,12
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_DIALOGBAR_CONTROL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 89
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 144
+    END
+
+    IDD_DIALOG_SETTINGS_WALL, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 155
+    END
+
+    IDD_DIALOG_SETTINGS_SECTOR, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 187
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP_MAIN         BITMAP  DISCARDABLE     "toolbat_main.bmp"
+IDB_BITMAP_VIEW_TOOLBAR BITMAP  DISCARDABLE     "toolbar_grid.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDR_MENU_MAIN           "Редактор уровней\n \n \nFiles (*.3dm)\n.3dm\n \n"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_BUTTON_TOOLBAR_MAIN_CREATE_WALL "Создание стен\nСоздание стен"
+    ID_BUTTON_TOOLBAR_MAIN_CREATE_FRONTIER 
+                            "Создание стен-линий раздела\nСоздание стен-линий раздела"
+    ID_BUTTON_TOOLBAR_MAIN_CREATE_SECTOR 
+                            "Создание секторов\nСоздание секторов"
+    ID_BUTTON_TOOLBAR_MAIN_FRONTIER_SELECT 
+                            "Выбор стен-линий раздела\nВыбор стен-линий раздела"
+    ID_BUTTON_TOOLBAR_MAIN_WALL_SELECT "Выбор стен\nВыбор стен"
+    ID_BUTTON_TOOLBAR_MAIN_SECTOR_SELECT "Выбор секторов\nВыбор секторов"
+    ID_BUTTON_TOOLBAR_MAIN_SET_PLAYER_POSITION 
+                            "Задание начальной позиции игрока\nЗадание начальной позиции игрока"
+END
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
